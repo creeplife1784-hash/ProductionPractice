@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форменное мыло ручной работы — натуральный уход для всей семьи">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <title>Форменное мыло ручной работы</title>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-logo">
+                <div class="logo-placeholder">Logo</div>
+                <span>Мыльный ФормУм</span>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list" id="navList">
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#slider">Галерея</a></li>
+                    <li><a href="#video">Видео</a></li>
+                    <li><a href="#features">Преимущества</a></li>
+                    <li><a href="#form">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Натуральное <span>форменное мыло</span> ручной работы</h1>
+                <p>Мыло, созданное с душой из натуральных компонентов. Забота о вашей коже и эстетика в каждом кусочке. Идеально для ежедневного ухода и красивого подарка.</p>
+                <div class="hero-buttons">
+                    <a href="#form" class="btn btn-primary">Сделать заказ</a>
+                    <a href="#slider" class="btn btn-outline">Смотреть работы</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-box">
+                    [Изображение продукта]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title">О нашей продукции</h2>
+            <div class="about-content">
+                <p>Мы создаём форменное мыло ручной работы, которое продаётся на Wildberries. Каждый кусочек — это результат тщательного подбора натуральных ингредиентов и любви к своему делу.</p>
+                <p>Наше мыло не только красиво выглядит, но и бережно ухаживает за кожей. В составе только натуральные масла, травы и эфирные масла. Без парабенов, сульфатов и искусственных красителей.</p>
+                <div class="placeholder-box" style="max-width: 600px; margin: 30px auto 0;">
+                    [Описание продукта и фотографии]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDER ===== -->
+    <section class="slider-section section" id="slider">
+        <div class="container">
+            <h2 class="section-title">Наши работы</h2>
+            <div class="slider" id="slider">
+                <div class="slider-track" id="sliderTrack">
+                    <div class="slider-slide">
+                        <div class="placeholder-box">[Слайд 1 — изображение мыла]</div>
+                    </div>
+                    <div class="slider-slide">
+                        <div class="placeholder-box">[Слайд 2 — изображение мыла]</div>
+                    </div>
+                    <div class="slider-slide">
+                        <div class="placeholder-box">[Слайд 3 — изображение мыла]</div>
+                    </div>
+                    <div class="slider-slide">
+                        <div class="placeholder-box">[Слайд 4 — изображение мыла]</div>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="sliderPrev">&#8249;</button>
+                <button class="slider-btn next" id="sliderNext">&#8250;</button>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO ===== -->
+    <section class="video-section section" id="video">
+        <div class="container">
+            <h2 class="section-title">Видео о производстве</h2>
+            <div class="video-player" id="videoPlayer">
+                <div class="video-placeholder" id="videoPlaceholder">
+                    <div class="play-btn">&#9654;</div>
+                    <p>Нажмите, чтобы посмотреть видео</p>
+                </div>
+                <video id="videoTag" controls preload="none" style="display:none;">
+                    <source src="" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features section" id="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#127793;</div>
+                    <h3>Натуральный состав</h3>
+                    <p>Только природные компоненты: масла, травы, глина. Никакой химии.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#9996;</div>
+                    <h3>Ручная работа</h3>
+                    <p>Каждый кусочек создаётся вручную с вниманием к деталям и качеству.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127881;</div>
+                    <h3>Подарочный вид</h3>
+                    <p>Эстетичная упаковка и уникальный дизайн делают мыло отличным подарком.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128230;</div>
+                    <h3>Удобная доставка</h3>
+                    <p>Заказывайте через Wildberries — быстрая доставка по всей России.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#10024;</div>
+                    <h3>Широкий ассортимент</h3>
+                    <p>Разнообразие форм, ароматов и цветов на любой вкус и сезон.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#129505;</div>
+                    <h3>Забота о коже</h3>
+                    <p>Мыло увлажняет, питает и не сушит кожу благодаря натуральным маслам.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORM ===== -->
+    <section class="form-section section" id="form">
+        <div class="container">
+            <h2 class="section-title">Связаться с нами</h2>
+            <div class="form-wrapper">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" placeholder="Напишите ваш вопрос или заказ..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Мыльный ФормУм</h4>
+                <p>Форменное мыло ручной работы. Натуральный уход и эстетика в каждом кусочке. Продажа на Wildberries.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#slider">Галерея</a></li>
+                    <li><a href="#video">Видео</a></li>
+                    <li><a href="#features">Преимущества</a></li>
+                    <li><a href="#form">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <p>Email: info@soap.example</p>
+                <p>Wildberries: /brand/soap</p>
+                <p>г. Белореченск</p>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Мыльный ФормУм. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
