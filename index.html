@@ -21,6 +21,14 @@
                 <ul class="nav-list" id="navList">
                     <li><a href="#hero">Главная</a></li>
                     <li><a href="#about">О нас</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Каталог &#9662;</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#configurator">Мыло ручной работы</a></li>
+                            <li><a href="#slider">Подарочные наборы</a></li>
+                            <li><a href="#slider">Эко-серия</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#slider">Галерея</a></li>
                     <li><a href="#video">Видео</a></li>
                     <li><a href="#features">Преимущества</a></li>
@@ -38,7 +46,7 @@
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content scroll-anim fade-in-up">
                 <h1>Натуральное <span>форменное мыло</span> ручной работы</h1>
                 <p>Мыло, созданное с душой из натуральных компонентов. Забота о вашей коже и эстетика в каждом кусочке. Идеально для ежедневного ухода и красивого подарка.</p>
                 <div class="hero-buttons">
@@ -46,9 +54,9 @@
                     <a href="#slider" class="btn btn-outline">Смотреть работы</a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image scroll-anim fade-in-up">
                 <div class="placeholder-box">
-                    [Изображение продукта]
+                    [3D изображение продукта]
                 </div>
             </div>
         </div>
@@ -57,8 +65,8 @@
     <!-- ===== ABOUT ===== -->
     <section class="about section" id="about">
         <div class="container">
-            <h2 class="section-title">О нашей продукции</h2>
-            <div class="about-content">
+            <h2 class="section-title scroll-anim fade-in-up">О нашей продукции</h2>
+            <div class="about-content scroll-anim fade-in-up">
                 <p>Мы создаём форменное мыло ручной работы, которое продаётся на Wildberries. Каждый кусочек — это результат тщательного подбора натуральных ингредиентов и любви к своему делу.</p>
                 <p>Наше мыло не только красиво выглядит, но и бережно ухаживает за кожей. В составе только натуральные масла, травы и эфирные масла. Без парабенов, сульфатов и искусственных красителей.</p>
                 <div class="placeholder-box" style="max-width: 600px; margin: 30px auto 0;">
@@ -68,11 +76,92 @@
         </div>
     </section>
 
+    <!-- ===== CONFIGURATOR ===== -->
+    <section class="configurator section" id="configurator">
+        <div class="container">
+            <h2 class="section-title scroll-anim fade-in-up">Собери своё мыло</h2>
+            <div class="configurator-wrapper scroll-anim fade-in-up">
+                <div class="config-form">
+                    <div class="config-group">
+                        <label for="cfgForm">Форма</label>
+                        <select id="cfgForm">
+                            <option value="Круглое">Круглое</option>
+                            <option value="Квадратное">Квадратное</option>
+                            <option value="Сердечко">Сердечко</option>
+                            <option value="Цветок">Цветок</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label for="cfgScent">Аромат</label>
+                        <select id="cfgScent">
+                            <option value="Лаванда">Лаванда</option>
+                            <option value="Цитрус">Цитрус</option>
+                            <option value="Роза">Роза</option>
+                            <option value="Мёд">Мёд</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label for="cfgColor">Цвет</label>
+                        <div class="color-options">
+                            <label class="color-option">
+                                <input type="radio" name="cfgColor" value="Розовый" checked>
+                                <span class="color-swatch" style="background:#f48fb1"></span>
+                                Розовый
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="cfgColor" value="Белый">
+                                <span class="color-swatch" style="background:#fff;border:2px solid #ddd"></span>
+                                Белый
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="cfgColor" value="Фиолетовый">
+                                <span class="color-swatch" style="background:#ce93d8"></span>
+                                Фиолетовый
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="cfgColor" value="Зелёный">
+                                <span class="color-swatch" style="background:#81c784"></span>
+                                Зелёный
+                            </label>
+                        </div>
+                    </div>
+                    <div class="config-group">
+                        <label for="cfgAdditives">Добавки</label>
+                        <select id="cfgAdditives">
+                            <option value="Без добавок">Без добавок</option>
+                            <option value="Овсяные хлопья">Овсяные хлопья</option>
+                            <option value="Сушёные цветы">Сушёные цветы</option>
+                            <option value="Кофе">Кофе</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="config-result" id="configResult">
+                    <div class="config-result-inner">
+                        <div class="config-soap" id="configSoap">
+                            <div class="config-soap-shape" id="configSoapShape">
+                                <div class="config-soap-inner" id="configSoapInner">
+                                    <span class="config-soap-emoji" id="configSoapEmoji">&#127807;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="config-info" id="configInfo">
+                            <h3>Ваше мыло</h3>
+                            <p>Форма: <span id="infoForm">Круглое</span></p>
+                            <p>Аромат: <span id="infoScent">Лаванда</span></p>
+                            <p>Цвет: <span id="infoColor">Розовый</span></p>
+                            <p>Добавки: <span id="infoAdditives">Без добавок</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== SLIDER ===== -->
     <section class="slider-section section" id="slider">
         <div class="container">
-            <h2 class="section-title">Наши работы</h2>
-            <div class="slider" id="slider">
+            <h2 class="section-title scroll-anim fade-in-up">Наши работы</h2>
+            <div class="slider scroll-anim fade-in-up" id="slider">
                 <div class="slider-track" id="sliderTrack">
                     <div class="slider-slide">
                         <div class="placeholder-box">[Слайд 1 — изображение мыла]</div>
@@ -94,12 +183,28 @@
         </div>
     </section>
 
+    <!-- ===== BANNER ===== -->
+    <section class="promo-banner scroll-anim fade-in-up">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h1 class="typing-text">
+                    Мыло, которое хочется подарить
+                </h1>
+                <p class="subtitle">
+                    Натуральный уход и неповторимый дизайн для вашего настроения
+                </p>
+                <button class="btn btn-primary open-modal-btn">Подробнее об акции</button>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== VIDEO ===== -->
     <section class="video-section section" id="video">
         <div class="container">
-            <h2 class="section-title">Видео о производстве</h2>
-            <div class="video-player" id="videoPlayer">
+            <h2 class="section-title scroll-anim fade-in-up">Видео о производстве</h2>
+            <div class="video-player scroll-anim fade-in-up" id="videoPlayer">
                 <div class="video-placeholder" id="videoPlaceholder">
+                    <div class="video-logo">[Логотип]</div>
                     <div class="play-btn">&#9654;</div>
                     <p>Нажмите, чтобы посмотреть видео</p>
                 </div>
@@ -107,6 +212,7 @@
                     <source src="" type="video/mp4">
                     Ваш браузер не поддерживает видео.
                 </video>
+                <div class="video-logo-overlay" id="videoLogoOverlay" style="display:none;">[Логотип]</div>
             </div>
         </div>
     </section>
@@ -114,34 +220,34 @@
     <!-- ===== FEATURES ===== -->
     <section class="features section" id="features">
         <div class="container">
-            <h2 class="section-title">Почему выбирают нас</h2>
+            <h2 class="section-title scroll-anim fade-in-up">Почему выбирают нас</h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card scroll-anim fade-in-up">
                     <div class="feature-icon">&#127793;</div>
                     <h3>Натуральный состав</h3>
                     <p>Только природные компоненты: масла, травы, глина. Никакой химии.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card scroll-anim fade-in-up">
                     <div class="feature-icon">&#9996;</div>
                     <h3>Ручная работа</h3>
                     <p>Каждый кусочек создаётся вручную с вниманием к деталям и качеству.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card scroll-anim fade-in-up">
                     <div class="feature-icon">&#127881;</div>
                     <h3>Подарочный вид</h3>
                     <p>Эстетичная упаковка и уникальный дизайн делают мыло отличным подарком.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card scroll-anim fade-in-up">
                     <div class="feature-icon">&#128230;</div>
                     <h3>Удобная доставка</h3>
                     <p>Заказывайте через Wildberries — быстрая доставка по всей России.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card scroll-anim fade-in-up">
                     <div class="feature-icon">&#10024;</div>
                     <h3>Широкий ассортимент</h3>
                     <p>Разнообразие форм, ароматов и цветов на любой вкус и сезон.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card scroll-anim fade-in-up">
                     <div class="feature-icon">&#129505;</div>
                     <h3>Забота о коже</h3>
                     <p>Мыло увлажняет, питает и не сушит кожу благодаря натуральным маслам.</p>
@@ -150,27 +256,51 @@
         </div>
     </section>
 
+    <!-- ===== 3D SECTION ===== -->
+    <section class="section td-section" id="td">
+        <div class="container">
+            <h2 class="section-title scroll-anim fade-in-up">Наше мыло в 3D</h2>
+            <div class="td-wrapper scroll-anim fade-in-up">
+                <div class="td-scene">
+                    <div class="td-cube">
+                        <div class="td-face front"></div>
+                        <div class="td-face back"></div>
+                        <div class="td-face right"></div>
+                        <div class="td-face left"></div>
+                        <div class="td-face top"></div>
+                        <div class="td-face bottom"></div>
+                    </div>
+                    <p class="td-label">Мыло ручной работы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== FORM ===== -->
     <section class="form-section section" id="form">
         <div class="container">
-            <h2 class="section-title">Связаться с нами</h2>
-            <div class="form-wrapper">
-                <form id="contactForm">
+            <h2 class="section-title scroll-anim fade-in-up">Связаться с нами</h2>
+            <div class="form-wrapper scroll-anim fade-in-up">
+                <form id="contactForm" novalidate>
                     <div class="form-group">
-                        <label for="name">Ваше имя</label>
+                        <label for="name">Ваше имя <span class="required">*</span></label>
                         <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                        <span class="form-hint" data-hint="Введите имя, как к вам обращаться">&#9432;</span>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Телефон</label>
+                        <label for="phone">Телефон <span class="required">*</span></label>
                         <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        <span class="form-hint" data-hint="Укажите номер для связи в формате +7">&#9432;</span>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="example@mail.ru">
+                        <span class="form-hint" data-hint="Необязательно, но удобно для отправки каталога">&#9432;</span>
                     </div>
                     <div class="form-group">
-                        <label for="message">Сообщение</label>
+                        <label for="message">Сообщение <span class="required">*</span></label>
                         <textarea id="message" name="message" placeholder="Напишите ваш вопрос или заказ..." required></textarea>
+                        <span class="form-hint" data-hint="Опишите, что вас интересует: цена, состав, доставка">&#9432;</span>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Отправить</button>
@@ -183,11 +313,25 @@
         </div>
     </section>
 
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-content">
+                <h3>Акция!</h3>
+                <p>При заказе от 3 кусков мыла — скидка 15% и бесплатная доставка!</p>
+                <p>Успейте заказать до конца месяца.</p>
+                <div class="placeholder-box" style="min-height:100px;margin-top:15px;">[Изображение акции]</div>
+                <a href="#form" class="btn btn-primary" style="margin-top:20px;">Заказать сейчас</a>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-col">
-                <h4>Мыльный ФормУм</h4>
+                <h4>[НАЗВАНИЕ]</h4>
                 <p>Форменное мыло ручной работы. Натуральный уход и эстетика в каждом кусочке. Продажа на Wildberries.</p>
             </div>
             <div class="footer-col">
@@ -195,6 +339,7 @@
                 <ul>
                     <li><a href="#hero">Главная</a></li>
                     <li><a href="#about">О нас</a></li>
+                    <li><a href="#configurator">Конфигуратор</a></li>
                     <li><a href="#slider">Галерея</a></li>
                     <li><a href="#video">Видео</a></li>
                     <li><a href="#features">Преимущества</a></li>

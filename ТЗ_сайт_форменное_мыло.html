@@ -1,0 +1,140 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<style>
+body { font-family: 'Times New Roman', serif; font-size: 14pt; line-height: 1.5; color: #000; margin: 0; padding: 0; }
+@page { size: A4; margin-left: 30mm; margin-right: 10mm; margin-top: 20mm; margin-bottom: 20mm; }
+h1 { font-size: 14pt; text-align: center; text-transform: uppercase; page-break-before: always; margin-top: 0; margin-bottom: 24pt; line-height: 1.15; font-weight: bold; }
+h2 { font-size: 14pt; text-align: left; text-indent: 1.25cm; margin-top: 18pt; margin-bottom: 12pt; line-height: 1.15; font-weight: bold; }
+h3 { font-size: 14pt; text-align: left; text-indent: 1.25cm; margin-top: 12pt; margin-bottom: 6pt; line-height: 1.15; font-weight: bold; }
+p { font-size: 14pt; line-height: 1.5; text-align: justify; text-indent: 1.25cm; margin-top: 0; margin-bottom: 0; }
+p.no-indent, .center { text-indent: 0; }
+.center { text-align: center; }
+table { border-collapse: collapse; width: 100%; margin: 12pt 0; font-size: 12pt; }
+td, th { border: 1px solid #000; padding: 4pt 8pt; text-align: left; vertical-align: top; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 1.15; }
+ul, ol { font-size: 14pt; line-height: 1.5; font-family: 'Times New Roman', serif; margin-top: 0; margin-bottom: 0; }
+li { margin-bottom: 2pt; }
+.title-page { text-align: center; padding-top: 80pt; }
+.title-page h1 { font-size: 16pt; margin-bottom: 40pt; }
+</style>
+</head>
+<body>
+
+<div class="title-page">
+    <h1 style="margin-bottom: 60pt;">ТЕХНИЧЕСКОЕ ЗАДАНИЕ</h1>
+    <p class="center" style="font-size: 16pt; font-weight: bold;">на разработку сайта-визитки</p>
+    <p class="center" style="font-size: 16pt; font-weight: bold; margin-bottom: 40pt;">«Форменное мыло ручной работы»</p>
+
+    <p class="center" style="margin-top: 60pt;">Заказчик: ___________________________</p>
+    <p class="center" style="margin-top: 20pt;">Исполнитель: ________________________</p>
+    <p class="center" style="margin-top: 60pt;">г. Белореченск, 2026</p>
+</div>
+
+<h1>1. Общие сведения</h1>
+
+<p><b>1.1. Наименование проекта:</b> Сайт-визитка «Форменное мыло ручной работы».</p>
+<p><b>1.2. Заказчик:</b> ИП (продавец форменного мыла ручной работы на Wildberries).</p>
+<p><b>1.3. Исполнитель:</b> Обучающийся специальности 09.02.07 Информационные системы и программирование.</p>
+<p><b>1.4. Основание для разработки:</b> Производственная практика по ПМ.08 «Разработка дизайна веб-приложений».</p>
+<p><b>1.5. Сроки выполнения:</b> 4 недели (144 часа).</p>
+
+<h1>2. Назначение и цели создания сайта</h1>
+
+<p><b>2.1. Назначение:</b> Сайт-визитка для рекламы и продвижения форменного мыла ручной работы. Основная площадка продаж — Wildberries, сайт выполняет информационно-рекламную функцию и побуждает к заказу через форму связи или переходу на Wildberries.</p>
+
+<p><b>2.2. Цели:</b></p>
+<ul>
+    <li>создать цифровое представительство бренда;</li>
+    <li>информировать потенциальных покупателей о преимуществах продукта;</li>
+    <li>обеспечить канал обратной связи (заказ/вопрос через форму);</li>
+    <li>разместить портфолио работ и видео о производстве.</li>
+</ul>
+
+<h1>3. Требования к сайту</h1>
+
+<h2>3.1. Функциональные требования</h2>
+
+<table>
+    <tr><th>№</th><th>Функция</th><th>Описание</th></tr>
+    <tr><td>1</td><td>Навигация</td><td>Фиксированное меню с якорными ссылками на секции. На мобильных — бургер-меню.</td></tr>
+    <tr><td>2</td><td>Слайдер</td><td>Карусель изображений продукции с кнопками «вперёд/назад» и точками-индикаторами.</td></tr>
+    <tr><td>3</td><td>Видеоплеер</td><td>HTML5-плеер с плейсхолдером; запуск по клику.</td></tr>
+    <tr><td>4</td><td>Форма связи</td><td>Поля: имя, телефон (обяз.), email, сообщение (обяз.). Валидация на JS.</td></tr>
+    <tr><td>5</td><td>Адаптивность</td><td>Корректное отображение от 320px до 1920px.</td></tr>
+</table>
+
+<h2>3.2. Требования к дизайну</h2>
+<p>Тип: одностраничный сайт, секции на всю ширину.</p>
+<p>Цвета: белый (#ffffff), светло-розовый (#fdf2f8), акцентный розовый (#ec407a).</p>
+<p>Шрифты: заголовки — Roboto, основной текст — Comic Relief (Google Fonts).</p>
+<p>Эффекты: плавные переходы, тени при наведении.</p>
+
+<h2>3.3. Требования к вёрстке</h2>
+<ul>
+    <li>HTML5, CSS3, JavaScript (без библиотек/фреймворков).</li>
+    <li>CSS-переменные.</li>
+    <li>Файлы: css/fonts.css, css/global.css, css/components.css, js/script.js.</li>
+    <li>Кросс-браузерность: Chrome, Firefox, Edge, Safari (2 последние версии).</li>
+</ul>
+
+<h2>3.4. Требования к адаптивности</h2>
+<table>
+    <tr><th>Устройство</th><th>Ширина</th><th>Особенности</th></tr>
+    <tr><td>Десктоп</td><td>&gt;1024px</td><td>Полноценная сетка, горизонтальное меню</td></tr>
+    <tr><td>Планшет</td><td>768–1024px</td><td>2 колонки, уменьшенные отступы</td></tr>
+    <tr><td>Телефон</td><td>&lt;768px</td><td>1 колонка, бургер-меню, центрирование</td></tr>
+    <tr><td>Малые экраны</td><td>&lt;480px</td><td>Минимальные отступы, уменьшенный шрифт</td></tr>
+</table>
+
+<h2>3.5. Требования к контенту</h2>
+<p>Логотип, изображения и видео — плейсхолдеры (добавляются после подготовки в графическом редакторе).</p>
+
+<h1>4. Структура сайта</h1>
+<ol>
+    <li>Header — логотип, название, навигация</li>
+    <li>Hero — заголовок, описание, CTA-кнопки, изображение</li>
+    <li>About — описание продукции</li>
+    <li>Slider — галерея работ</li>
+    <li>Video — плеер</li>
+    <li>Features — 6 карточек преимуществ</li>
+    <li>Form — форма обратной связи</li>
+    <li>Footer — контакты, копирайт</li>
+</ol>
+
+<h1>5. Состав и содержание работ</h1>
+<table>
+    <tr><th>Этап</th><th>Содержание работ</th><th>Часы</th></tr>
+    <tr><td>1</td><td>Анализ ТЗ, целевой аудитории, выбор дизайн-решения</td><td>24</td></tr>
+    <tr><td>2</td><td>Прототип и информационная архитектура</td><td>20</td></tr>
+    <tr><td>3</td><td>Вёрстка HTML + CSS (global, components)</td><td>24</td></tr>
+    <tr><td>4</td><td>JavaScript (слайдер, плеер, форма, меню)</td><td>20</td></tr>
+    <tr><td>5</td><td>Разработка логотипа и графики</td><td>26</td></tr>
+    <tr><td>6</td><td>Тестирование</td><td>12</td></tr>
+    <tr><td>7</td><td>Размещение на хостинге</td><td>4</td></tr>
+    <tr><td>8</td><td>Составление отчёта</td><td>12</td></tr>
+    <tr><td></td><td><b>Итого</b></td><td><b>144</b></td></tr>
+</table>
+
+<h1>6. Размещение</h1>
+<p>Хостинг: GitHub Pages. Адрес: https://creeplife1784-hash.github.io/ProductionPractice.</p>
+
+<h1>7. Требования к документации</h1>
+<ul>
+    <li>Отчёт 15–25 листов (без приложений).</li>
+    <li>Times New Roman 14, полуторный интервал, поля 30-20-10-20 мм.</li>
+    <li>Приложения с листингом кода.</li>
+    <li>Список источников (от 15).</li>
+</ul>
+
+<h1>8. Порядок сдачи</h1>
+<ol>
+    <li>Заказчик проверяет сайт по ссылке.</li>
+    <li>Вносит пожелания по контенту.</li>
+    <li>Исполнитель добавляет контент.</li>
+    <li>Подписывается акт приёма-передачи.</li>
+</ol>
+
+</body>
+</html>
