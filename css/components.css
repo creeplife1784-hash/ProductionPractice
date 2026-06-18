@@ -367,7 +367,7 @@
 }
 
 .subtitle.typing-active {
-    animation: fadeInSub 1s 1.5s forwards;
+    opacity: 1;
 }
 
 @keyframes fadeInSub {
