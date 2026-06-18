@@ -213,158 +213,6 @@
     margin-bottom: 20px;
 }
 
-/* ===== CONFIGURATOR ===== */
-.configurator {
-    background: var(--color-white);
-}
-
-.configurator-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    align-items: start;
-}
-
-.config-group {
-    margin-bottom: 20px;
-}
-
-.config-group label {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-    color: var(--color-text);
-}
-
-.config-group select {
-    width: 100%;
-    padding: 12px 16px;
-    border: 2px solid #eee;
-    border-radius: 12px;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--color-text);
-    background: var(--color-white);
-    transition: border-color 0.3s;
-    outline: none;
-    cursor: pointer;
-}
-
-.config-group select:focus {
-    border-color: var(--color-pink);
-}
-
-.color-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.color-option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    border: 2px solid #eee;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-}
-
-.color-option:hover {
-    border-color: var(--color-pink);
-}
-
-.color-option input[type="radio"] {
-    display: none;
-}
-
-.color-option input[type="radio"]:checked + .color-swatch {
-    box-shadow: 0 0 0 3px var(--color-white), 0 0 0 5px var(--color-pink-dark);
-}
-
-.color-option:has(input:checked) {
-    border-color: var(--color-pink-dark);
-    background: var(--color-light-pink);
-}
-
-.color-swatch {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: inline-block;
-    flex-shrink: 0;
-}
-
-.config-result {
-    background: var(--color-light-pink);
-    border-radius: var(--radius);
-    padding: 40px;
-    text-align: center;
-    position: sticky;
-    top: 100px;
-}
-
-.config-result-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.config-soap {
-    perspective: 600px;
-}
-
-.config-soap-shape {
-    width: 160px;
-    height: 160px;
-    background: #f48fb1;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    transition: all 0.5s ease;
-    box-shadow: 0 8px 30px rgba(244, 143, 177, 0.4);
-}
-
-.config-soap-inner {
-    text-align: center;
-}
-
-.config-soap-emoji {
-    font-size: 3rem;
-    display: block;
-}
-
-.config-info {
-    text-align: center;
-}
-
-.config-info h3 {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: var(--color-text);
-}
-
-.config-info p {
-    font-size: 0.95rem;
-    color: var(--color-text-light);
-    margin: 4px 0;
-}
-
-.config-info span {
-    color: var(--color-pink-dark);
-    font-weight: 600;
-}
-
 /* ===== SLIDER ===== */
 .slider-section {
     background: var(--color-white);
@@ -660,70 +508,6 @@
     line-height: 1.6;
 }
 
-/* ===== 3D SECTION ===== */
-.td-section {
-    background: var(--color-light-pink);
-}
-
-.td-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.td-scene {
-    perspective: 800px;
-    width: 200px;
-    height: 200px;
-}
-
-.td-cube {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: tdRotate 10s linear infinite;
-}
-
-@keyframes tdRotate {
-    0% { transform: rotateX(-20deg) rotateY(0deg); }
-    100% { transform: rotateX(-20deg) rotateY(360deg); }
-}
-
-.td-face {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #f48fb1, #fce4ec);
-    border: 2px solid var(--color-pink-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--color-pink-dark);
-    opacity: 0.85;
-    backface-visibility: visible;
-}
-
-.td-face::before {
-    content: '\2728';
-    font-size: 2rem;
-}
-
-.td-face.front  { transform: translateZ(100px); }
-.td-face.back   { transform: rotateY(180deg) translateZ(100px); }
-.td-face.right  { transform: rotateY(90deg) translateZ(100px); }
-.td-face.left   { transform: rotateY(-90deg) translateZ(100px); }
-.td-face.top    { transform: rotateX(90deg) translateZ(100px); }
-.td-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
-
-.td-label {
-    text-align: center;
-    margin-top: 30px;
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    color: var(--color-text-light);
-}
-
 /* ===== FORM ===== */
 .form-section {
     background: var(--color-light-pink);
@@ -967,7 +751,6 @@
 @media (max-width: 1100px) {
     .hero-content h1 { font-size: 2.6rem; }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
-    .configurator-wrapper { gap: 30px; }
 }
 
 /* ===== MOBILE <= 768px ===== */
@@ -1041,46 +824,12 @@
     .slider-btn { width: 40px; height: 40px; font-size: 1.2rem; }
     .slider-slide .placeholder-box { min-height: 280px; }
 
-    .configurator-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .config-result {
-        position: static;
-    }
-
-    .color-options {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .typing-text {
         font-size: 1.8rem;
         white-space: normal;
         border-right: none;
         animation: none;
         width: auto;
-    }
-
-    .td-cube {
-        width: 150px;
-        height: 150px;
-    }
-
-    .td-face {
-        width: 150px;
-        height: 150px;
-    }
-
-    .td-face.front  { transform: translateZ(75px); }
-    .td-face.back   { transform: rotateY(180deg) translateZ(75px); }
-    .td-face.right  { transform: rotateY(90deg) translateZ(75px); }
-    .td-face.left   { transform: rotateY(-90deg) translateZ(75px); }
-    .td-face.top    { transform: rotateX(90deg) translateZ(75px); }
-    .td-face.bottom { transform: rotateX(-90deg) translateZ(75px); }
-
-    .td-scene {
-        width: 150px;
-        height: 150px;
     }
 }
 
@@ -1090,8 +839,6 @@
     .hero-content h1 { font-size: 1.8rem; }
     .hero-content p { font-size: 1rem; }
     .btn { padding: 12px 28px; font-size: 0.9rem; }
-    .color-options { grid-template-columns: 1fr; }
-    .config-soap-shape { width: 130px; height: 130px; }
 }
 
 /* ===== EXTRA SMALL <= 360px ===== */

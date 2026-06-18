@@ -144,58 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
         videoTag.play();
     });
 
-    // ===== CONFIGURATOR =====
-    var cfgForm = document.getElementById('cfgForm');
-    var cfgScent = document.getElementById('cfgScent');
-    var cfgAdditives = document.getElementById('cfgAdditives');
-    var cfgColorRadios = document.querySelectorAll('input[name="cfgColor"]');
-    var infoForm = document.getElementById('infoForm');
-    var infoScent = document.getElementById('infoScent');
-    var infoColor = document.getElementById('infoColor');
-    var infoAdditives = document.getElementById('infoAdditives');
-    var configSoapShape = document.getElementById('configSoapShape');
-    var configSoapInner = document.getElementById('configSoapInner');
-    var configSoapEmoji = document.getElementById('configSoapEmoji');
-
-    var shapeMap = {
-        'Круглое': { radius: '50%', emoji: '&#127807;' },
-        'Квадратное': { radius: '15%', emoji: '&#9632;' },
-        'Сердечко': { radius: '50% 50% 50% 0 / 50% 50% 0 50%', emoji: '&#10084;' },
-        'Цветок': { radius: '50% 0 50% 0', emoji: '&#127800;' }
-    };
-
-    var colorMap = {
-        'Розовый': '#f48fb1',
-        'Белый': '#f5f5f5',
-        'Фиолетовый': '#ce93d8',
-        'Зелёный': '#81c784'
-    };
-
-    function updateConfigurator() {
-        var form = cfgForm.value;
-        var scent = cfgScent.value;
-        var color = 'Розовый';
-        cfgColorRadios.forEach(function (r) { if (r.checked) color = r.value; });
-        var additives = cfgAdditives.value;
-
-        infoForm.textContent = form;
-        infoScent.textContent = scent;
-        infoColor.textContent = color;
-        infoAdditives.textContent = additives;
-
-        var shapeData = shapeMap[form] || shapeMap['Круглое'];
-        configSoapShape.style.borderRadius = shapeData.radius;
-        configSoapShape.style.background = colorMap[color] || '#f48fb1';
-        configSoapEmoji.innerHTML = shapeData.emoji;
-    }
-
-    cfgForm.addEventListener('change', updateConfigurator);
-    cfgScent.addEventListener('change', updateConfigurator);
-    cfgAdditives.addEventListener('change', updateConfigurator);
-    cfgColorRadios.forEach(function (r) { r.addEventListener('change', updateConfigurator); });
-
-    updateConfigurator();
-
     // ===== MODAL =====
     var modalOverlay = document.getElementById('modalOverlay');
     var modalClose = document.getElementById('modalClose');
