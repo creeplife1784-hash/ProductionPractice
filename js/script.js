@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formSuccess.classList.add('show');
     });
 
-    // ===== SCROLL ANIMATIONS =====
+    // ===== SCROLL ANIMATIONS (fade-in) =====
     var animElements = document.querySelectorAll('.scroll-anim');
 
     if ('IntersectionObserver' in window) {
@@ -207,6 +207,23 @@ document.addEventListener('DOMContentLoaded', function () {
         animElements.forEach(function (el) { observer.observe(el); });
     } else {
         animElements.forEach(function (el) { el.classList.add('visible'); });
+    }
+
+    // ===== TYPING ANIMATION ON SCROLL =====
+    var bannerObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.typing-text, .subtitle').forEach(function (el) {
+                    el.classList.add('typing-active');
+                });
+                bannerObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    var bannerSection = document.querySelector('.promo-banner');
+    if (bannerSection && 'IntersectionObserver' in window) {
+        bannerObserver.observe(bannerSection);
     }
 
 });
