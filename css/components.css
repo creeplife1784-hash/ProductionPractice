@@ -23,11 +23,17 @@
 }
 
 .logo-3d {
-    transform: perspective(500px) rotateY(15deg);
+    animation: logo3dSway 3s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+@keyframes logo3dSway {
+    0% { transform: perspective(500px) rotateY(-15deg); }
+    100% { transform: perspective(500px) rotateY(15deg); }
 }
 
 .logo-3d:hover {
-    transform: perspective(500px) rotateY(0deg);
+    animation-play-state: paused;
 }
 
 .header-logo {
@@ -423,28 +429,27 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.15);
+
     backdrop-filter: blur(4px);
     padding: 8px 16px;
     border-radius: 8px;
     color: var(--color-white);
     font-size: 0.8rem;
     font-family: var(--font-heading);
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .video-logo-overlay {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.15);
+
     backdrop-filter: blur(4px);
     padding: 8px 16px;
     border-radius: 8px;
     color: var(--color-white);
     font-size: 0.8rem;
     font-family: var(--font-heading);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+
     z-index: 5;
     pointer-events: none;
 }
