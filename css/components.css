@@ -18,6 +18,18 @@
     padding: 15px 20px;
 }
 
+.header-logo img {
+    transition: transform 0.5s ease;
+}
+
+.logo-3d {
+    transform: perspective(500px) rotateY(15deg);
+}
+
+.logo-3d:hover {
+    transform: perspective(500px) rotateY(0deg);
+}
+
 .header-logo {
     font-family: var(--font-heading);
     font-size: 1.6rem;
